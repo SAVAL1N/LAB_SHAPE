@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="670.0" prefWidth="555.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <ListView fx:id="listview" onMouseClicked="#drawShape" prefHeight="137.0" prefWidth="456.0" />
+      <GridPane alignment="CENTER" prefHeight="161.0" prefWidth="389.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ColorPicker fx:id="colorPicker" prefHeight="29.0" prefWidth="249.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="widhtStroke" prefHeight="32.0" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Выберите цвет фигуры">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label text="Выберите цвет обводки" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label text="Укажите толщину обводки" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <ColorPicker fx:id="strokeColor" prefHeight="32.0" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="244.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="textY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="246.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Укажите позицию фигуры по X" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label text="Укажите позицию фигуры по Y" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label text="Указать свою толщину" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textZ" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="246.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Canvas fx:id="canvas" height="180.0" width="483.0" />
+      <Label fx:id="figure" text="Фигура:" />
+      <Button fx:id="clear" mnemonicParsing="false" onAction="#onClear" text="Очистить" />
+   </children>
+</VBox>
